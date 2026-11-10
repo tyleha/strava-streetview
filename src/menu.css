@@ -1,0 +1,37 @@
+/* Menu for route-planning mode, where Strava shows none. Once Strava's own
+   menu has been seen, the item also gets Strava's button classes
+   (.ssv-native), and these item styles step aside. */
+.ssv-menu {
+  position: fixed;
+  z-index: 2147483647;
+  min-width: 180px;
+  padding: 4px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+  font: 14px/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: #242428;
+}
+
+.ssv-menu .ssv-item:not(.ssv-native) {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 12px;
+  border: 0;
+  border-radius: 4px;
+  background: none;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ssv-menu .ssv-item:not(.ssv-native):hover {
+  background: #f0f0f5;
+}
+
+.ssv-menu .ssv-native {
+  width: 100%;
+}
