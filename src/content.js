@@ -28,10 +28,12 @@
 
   // ---------- Street View ----------
 
+  // heading must be non-zero: with no heading (or 0) Google Maps resolves the
+  // panorama but renders a black view until you move. 1° looks like north.
   function openStreetView({ lat, lng }) {
     const url =
       "https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=" +
-      `${lat.toFixed(6)},${lng.toFixed(6)}`;
+      `${lat.toFixed(6)},${lng.toFixed(6)}&heading=1`;
     window.open(url, "_blank", "noopener");
   }
 

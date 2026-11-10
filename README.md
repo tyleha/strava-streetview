@@ -9,7 +9,9 @@ A Chrome extension that adds **Open in Street View** to the right-click menu on
   one-item menu, reusing Strava's menu styling when it has seen it.
 
 Picking the item opens Google Street View for that point in a new tab:
-`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=LAT,LNG`.
+`https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=LAT,LNG&heading=1`.
+The non-zero `heading` matters: without it Google Maps opens a black view
+until you move.
 If Google has no imagery there, Maps snaps to the nearest panorama.
 
 ## Install (unpacked)
